@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-color: #FFFFFF;
+    --font-family-1: 'Orbitron', sans-serif;
+    --font-long: 'Roboto', sans-serif;
+    --font-family-3: "Montserrat", serif;
+    --background-color-2:#025159;
+    --background-color:black;
+    --background-color-3:#012E40;
+    --text-shadow:0 0 10px rgba(255, 255, 255, 0.8);
+    --box-shadow:0 0 10px rgba(255, 255, 255, 0.8);
+    --border-color:#FFFFFF;
+    --border-raduis:15px;
+    --header-size:50px;
+    --a-size:20px;
+    --p-size:14px;
+    --font-size:24px;
+}
+body{
+    color: var(--font-color);
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+}
+/* nav */
+.nav1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    a{
+        color:var(--font-color);
+        font-family: var(--font-family-1);
+        font-size: var(--a-size);
+        text-shadow: var(--text-shadow);
+        text-decoration: none;
+
+    }
+}
+/* home img*/
+.home-img1{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    z-index: 1;
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+.home-img{
+    width: 1400px;
+}
+.header{
+    font-family: var(--font-family-1);
+    color: var(--font-color);
+    text-shadow: var(--text-shadow);
+    font-size: var(--header-size);
+    position: absolute;
+    top: 14%;
+    left: 36%;
+}
+/* solar system */
+.about-header{
+    font-family: var(--font-family-1);
+    font-size: var(--header-size);
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+.solar-system {
+    height: 870px;
+    position: relative;
+    z-index: 2;
+    top: 290px;
+    background-color: var(--background-color);
+    img{
+        animation: planet 1s ease infinite alternate;
+    };
+}
+@keyframes planet {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    
+}
+}
+h2{
+    font-family: var(--font-family-1);
+    font-weight: 200;
+}
+p{
+    font-size: var(--p-size);
+    font-family: var(--font-long);
+    font-weight: 200;
+}
+/* planets */
+.planets{
+    margin-top: 60px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    grid-template-rows: repeat(2,350px);
+    gap: 40px;
+}
+.planet{
+    padding: 20px;
+    display: grid;
+    gap: 5px;
+    border-radius: var(--border-raduis);
+    border-color: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: var(--box-shadow);
+    img{
+        margin-left: 45px;
+    }
+}
+footer{
+    position: relative;
+    z-index: 3;
+    top: 500px;
+}
+
+.float1{
+    margin-top: 70px;
+    float: right;
+    display: flex;
+    gap: 430px;
+    img{
+        width: 700px;
+    }
+}
+.flex1{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.icons{
+    margin-top: 10px;
+    display: flex;
+    gap: 56px;
+    cursor: pointer;
+}
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0.5px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+h3{
+    font-family: var(--font-family-1);
+    font-size: 20px;
+    font-weight: 200;
+}
+.pp{
+    position: relative;
+    z-index: 4;
+    top: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+/* Media Queries for responsiveness */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .home-img{
+        width: 750px;
+    }
+    .nav1 {
+        justify-content: center;
+        position: static;
+    }
+    .nav1 a {
+        font-size: 18px;
+    }
+    .header {
+        font-size: 40px;
+        top: 20%;
+        left: 30%;
+    }
+    .solar-system {
+        top: 0;
+        height: auto;
+    }
+    .about-header {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .planets {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+    .planet img {
+        margin-left: 0;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 200px;
+    }
+    .float1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .flex1 {
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-right: 70px;
+    }
+    .icons {
+        gap: 20px;
+    }
+    .pp{
+        top: 185px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .home-img{
+        width: 480px;
+    }
+    .nav1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav1 a {
+        font-size: 16px;
+    }
+    .header {
+        font-size: 30px;
+        top: 10%;
+        left: 25%;
+    }
+    .solar-system {
+        top: 0;
+        height: auto;
+    }
+    .about-header {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 10px;
+    }
+    .planets {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+    .planet img {
+        margin-left: 0;
+    }
+    .float1 img{
+        width: 480px;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .float1 {
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 0px;
+    }
+    .flex1 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 80px;
+    }
+    .icons {
+        gap: 10px;
+    }
+}
+@media (max-width: 433px){
+    .home-img{
+        width: 430px;
+    }
+    .nav1{
+        display: none;
+    }
+    .flex1 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 34px;
+    }
+}
+@media (max-width: 392px){
+    .home-img{
+        width: 392px;
+    }
+    .flex1 {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 85px;
+    }
+}
